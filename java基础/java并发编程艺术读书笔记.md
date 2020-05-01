@@ -1638,6 +1638,119 @@ ForkJoinPool由ForkJoinTask数组和ForkJoinWorkerThread数组组成，ForkJoinT
 - int getAndIncrement(T obj)
 
 
+# 第8章 Java中的并发工具类
+
+- CountDownLatch、CyclicBarrier和Semaphore用于并发流程控制
+- Exchanger用于在线程之间交换数据
+
+## 8.1 等待多线程完成的CountDownLatch
+
+CountDownLatch允许一个或多个线程等待其他线程完成操作。
+
+join用于让当前执行线程等待join线程执行结束。其实现原理是不停检查join线程是否存活，如果join线程存活则让当前线程永远等待.直到join线程中止后，线程的this.notifyAll()方法会被调用。
+
+```java
+public class TestCountDownLatch implements Runnable {
+    CountDownLatch countDownLatch;
+    public TestCountDownLatch(CountDownLatch countDownLatch) {
+        this.countDownLatch = countDownLatch;
+    }
+    @Override
+    public void run() {
+        System.out.println(Thread.currentThread().getName() + "执行完了");
+        countDownLatch.countDown();
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        int THREAD_COUNT = 3;
+        CountDownLatch countDownLatch = new CountDownLatch(THREAD_COUNT);
+        for (int i = 0; i < THREAD_COUNT; i++) {
+            new Thread(new TestCountDownLatch(countDownLatch)).start();
+        }
+        countDownLatch.await();
+        System.out.println("主线程继续执行");
+    }
+}
+```
+
+
+## 8.2 同步屏障CyclicBarrier
+
+让一组线程到达一个屏障（也可以叫同步点）时被阻塞，直到最后一个线程到达屏障时，屏障才会开门，所有被屏障拦截的线程才会继续运行。
+
+CyclicBarrier默认的构造方法是CyclicBarrier（int parties），其参数表示屏障拦截的线程数量，每个线程调用await方法告诉CyclicBarrier我已经到达了屏障，然后当前线程被阻塞。
+
+一个demo
+
+```java
+public class TestCycliBarrier {
+    public static void main(String[] args) throws BrokenBarrierException, InterruptedException {
+        CyclicBarrier cyclicBarrier = new CyclicBarrier(2);
+
+        new Thread(() -> {
+            try {
+                cyclicBarrier.await();
+                System.out.println(Thread.currentThread().getName() + "执行了");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }).start();
+
+        cyclicBarrier.await();
+        System.out.println(Thread.currentThread().getName() + "执行了");
+    }
+}
+
+```
+
+### 8.2.1 CyclicBarrier的应用场景
+
+CyclicBarrier可以用于多线程计算数据，最后合并计算结果的场景。例如，用一个Excel保存了用户所有银行流水，每个Sheet保存一个账户近一年的每笔银行流水，现在需要统计用户的日均银行流水，先用多线程处理每个sheet里的银行流水，都执行完之后，得到每个sheet的日均银行流水，最后，再用barrierAction用这些线程的计算结果，计算出整个Excel的日均银行流水
+
+这个例子可以练习一下
+
+### 8.2.2 CyclicBarrier和CountDownLatch的区别
+
+CountDownLatch的计数器只能使用一次，而CyclicBarrier的计数器可以使用reset()方法重置。所以CyclicBarrier能处理更为复杂的业务场景。例如，如果计算发生错误，可以重置计数器，并让线程重新执行一次。
+
+CyclicBarrier还提供其他有用的方法，比如getNumberWaiting方法可以获得Cyclic-Barrier阻塞的线程数量。isBroken()方法用来了解阻塞的线程是否被中断。
+
+
+## 8.3 控制并发线程数的Semaphore
+
+Semaphore（信号量）是用来控制同时访问特定资源的线程数量，它通过协调各个线程，以保证合理的使用公共资源。
+
+### 8.3.1 应用场景
+
+Semaphore可以用于做流量控制，特别是公用资源有限的应用场景
+
+Semaphore的构造方法Semaphore（int permits）接受一个整型的数字，表示可用的许可证数量。
+
+Semaphore的用法也很简单，首先线程使用Semaphore的acquire()方法获取一个许可证，使用完之后调用release()方法归还许可证。还可以用tryAcquire()方法尝试获取许可证。
+
+### 8.3.2 一些api
+
+- intavailablePermits()：返回此信号量中当前可用的许可证数。
+- intgetQueueLength()：返回正在等待获取许可证的线程数。
+- booleanhasQueuedThreads()：是否有线程正在等待获取许可证。
+- void reducePermits（int reduction）：减少reduction个许可证，是个protected方法。
+- Collection getQueuedThreads()：返回所有等待获取许可证的线程集合，是个protected方法。
+
+## 8.4 线程间交换数据的Exchanger
+
+
+Exchanger用于进行线程间的数据交换。它提供一个同步点，在这个同步点，两个线程可以交换彼此的数据。这两个线程通过exchange方法交换数据，如果第一个线程先执行exchange()方法，它会一直等待第二个线程也执行exchange方法，当两个线程都到达同步点时，这两个线程就可以交换数据，将本线程生产出来的数据传递给对方。
+
+应用场景
+
+- 遗传算法：遗传算法里需要选出两个人作为交配对象，这时候会交换两人的数据，并使用交叉规则得出2个交配结果
+
+- 对账：比如我们需要将纸制银行流水通过人工的方式录入成电子银行流水，为了避免错误，采用AB岗两人进行录入，录入到Excel之后，系统需要加载这两个Excel，并对两个Excel数据进行校对，看看是否录入一致
+
+TODO: 找个例子
+
+
+
 
 
 
