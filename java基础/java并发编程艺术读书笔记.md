@@ -1874,6 +1874,29 @@ shutdown和shutdownNow的区别
 
 
 
+# 第10章 Executor框架
+
+本章其实就是把整个线程池的体系介绍了一遍
+
+列个大纲吧
+
+10.1 Executor框架简介
+10.1.1 Executor框架的两级调度模型
+10.1.2 Executor框架的结构与成员
+1. Executor框架的结构
+2. Executor框架的成员
+（1）ThreadPoolExecutor
+（2）FixedThreadPool
+（3）SingleThreadExecutor   
+（4）CachedThreadPool
+（5）ScheduledThreadPoolExecutor
+（6）SingleThreadScheduledExecutor
+
+- Future接口与FutureTask
+- Runnable接口和Callable接口
+- FutureTask的实现
+
+
 
 
 
