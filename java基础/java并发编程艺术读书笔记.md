@@ -1287,10 +1287,274 @@ ConditionObject是同步器AbstractQueuedSynchronizer的内部类，因为Condit
 调用Condition的signal()方法，将会唤醒在等待队列中等待时间最长的节点（首节点），在唤醒节点之前，会将节点移到同步队列中。
 
 
+# 第6章 Java并发容器和框架
+
+## 6.1 ConcurrentHashMap的实现原理与使用
+
+ConcurrentHashMap是线程安全且高效的HashMap
+
+### 6.1.1 为什么要使用ConcurrentHashMap
+
+- HashMap是线程不安全的
+
+因为多线程会导致HashMap的Entry链表形成环形数据结构，一旦形成环形数据结构，Entry的next节点永远不为空，就会产生死循环获取Entry。
+
+- HashTable效率低下
+
+基于synchronized来保证线程安全，在线程竞争激烈的情况下HashTable的效率非常低下。如线程1使用put进行元素添加，线程2不但不能使用put方法添加元素，也不能使用get方法来获取元素，所以竞争越激烈效率越低。
+
+- ConcurrentHashMap的锁分段技术可有效提升并发访问率
+
+首先将数据分成一段一段地存储，然后给每一段数据配一把锁，当一个线程占用锁访问其中一个段数据的时候，其他段的数据也能被其他线程访问。
+
+### 6.1.2 ConcurrentHashMap的结构
+
+- ConcurrentHashMap是由Segment数组结构和HashEntry数组结构组成
+- Segment是一种可重入锁
+- HashEntry用于存储键值对数据
+- 一个ConcurrentHashMap里包含一个Segment数组。Segment的结构和HashMap类似，是一种数组和链表结构。
+- 一个Segment里包含一个HashEntry数组
+- 每个HashEntry是一个链表结构的元素
+- 每个Segment守护着一个HashEntry数组里的元素
+- 当对HashEntry数组的数据进行修改时，必须首先获得与它对应的Segment锁
+
+### 6.1.3 ConcurrentHashMap的初始化
+
+- 初始化segments数组
+
+初始化过程主要就是
+
+1. 计算数组长度ssize，segments数组的长度ssize是通过concurrencyLevel计算得出的。为了能通过按位与的散列算法来定位segments数组的索引，必须保证segments数组的长度是2的N次方（power-of-two size），所以必须计算出一个大于或等于concurrencyLevel的最小的2的N次方值来作为segments数组的长度。concurrencyLevel的最大值是65535，所以segments数组的长度最大为65536，对应的二进制是16位。
+
+- 初始化segmentShift和segmentMask
+
+1. 计算段偏移量segmentShift，sshift等于ssize从1向左移位的次数，在默认情况下concurrencyLevel等于16，1需要向左移位移动4次，所以sshift等于4。segmentShift用于定位参与散列运算的位数，segmentShift等于32减sshift，所以等于28，这里之所以用32是因为ConcurrentHashMap里的hash()方法输出的最大数是32位的
+2. 计算段掩码segmentMask，segmentMask是散列运算的掩码，等于ssize减1，即15，掩码的二进制各个位的值都是1。因为ssize的最大长度是65536，所以segmentShift最大值是16，segmentMask最大值是65535，对应的二进制是16位，每个位都是1。
+
+- 初始化每个segment
+
+就是为数组中的每个元素赋值
+
+- 定位Segment
+
+既然ConcurrentHashMap使用分段锁Segment来保护不同段的数据，那么在插入和获取元素的时候，必须先通过散列算法定位到Segment。可以看到ConcurrentHashMap会首先使用Wang/Jenkins hash的变种算法对元素的hashCode进行一次再散列。进行再散列的目的是减少散列冲突
+
+
+### 6.1.5 ConcurrentHashMap的操作
+
+- get
+
+先经过一次再散列，然后使用这个散列值通过散列运算定位到Segment，再通过散列算法定位到元素
+
+get操作的高效之处在于整个get过程不需要加锁，除非读到的值是空才会加锁重读
+
+- put
+
+由于put方法里需要对共享变量进行写入操作，所以为了线程安全，在操作共享变量时必须加锁。put方法首先定位到Segment，然后在Segment里进行插入操作。插入操作需要经历两个步骤，第一步判断是否需要对Segment里的HashEntry数组进行扩容，第二步定位添加元素的位置，然后将其放在HashEntry数组里。
+
+
+- size
+
+ConcurrentHashMap的做法是先尝试2次通过不锁住Segment的方式来统计各个Segment大小，如果统计的过程中，容器的count发生了变化，则再采用加锁的方式来统计所有Segment的大小。
+
+
+
+## 6.2 ConcurrentLinkedQueue
+
+线程安全的队列实现方式
+
+1. 使用阻塞算法：入队和出队加锁，同一把锁或者不同的锁
+2. 使用非阻塞算法：CAS
+
+ConcurrentLinkedQueue是一个基于链接节点的无界线程安全队列，采用了“wait-free”算法（即CAS算法）来实现
+
+
+### 6.2.1 入队
+
+- 入队过程：
+
+第一是定位出尾节点；第二是使用CAS算法将入队节点设置成尾节点的next节点，如不成功则重试。
+
+- 定位尾节点
+
+tail节点并不总是尾节点，所以每次入队都必须先通过tail节点来找到尾节点。尾节点可能是tail节点，也可能是tail节点的next节点
+
+- 设置入队节点为尾节点
+
+p.casNext（null，n）方法用于将入队节点设置为当前队列尾节点的next节点，如果p是null，表示p是当前队列的尾节点，如果不为null，表示有其他线程更新了尾节点，则需要重新获取当前队列的尾节点。
+
+- HOPS的设计意图
+
+使用hops变量来控制并减少tail节点的更新频率，并不是每次节点入队后都将tail节点更新成尾节点，而是当tail节点和尾节点的距离大于等于常量HOPS的值（默认等于1）时才更新tail节点，tail和尾节点的距离越长，使用CAS更新tail节点的次数就会越少，但是距离越长带来的负面效果就是每次入队时定位尾节点的时间就越长，因为循环体需要多循环一次来定位出尾节点，但是这样仍然能提高入队的效率，因为从本质上来看它通过增加对volatile变量的读操作来减少对volatile变量的写操作，而对volatile变量的写操作开销要远远大于读操作，所以入队效率会有所提升。
+
+
+### 6.2.2 出队
+
+出队列的就是从队列里返回一个节点元素，并清空该节点对元素的引用
+
+并不是每次出队时都更新head节点，当head节点里有元素时，直接弹出head节点里的元素，而不会更新head节点。只有当head节点里没有元素时，出队操作才会更新head节点。这种做法也是通过hops变量来减少使用CAS更新head节点的消耗，从而提高出队效率。
+
+
+### 6.3 java中的阻塞队列
+
+#### 阻塞队列的概念
+
+阻塞队列（BlockingQueue）是一个支持两个附加操作的队列。这两个附加的操作支持阻塞的插入和移除方法。
+
+
+- 支持阻塞的插入方法：意思是当队列满时，队列会阻塞插入元素的线程，直到队列不满。
+- 支持阻塞的移除方法：意思是在队列为空时，获取元素的线程会等待队列变为非空。
+
+阻塞队列适用于生产者消费者的模式
+
+当阻塞队列不可用时，提供了四种处理方式
+
+|方法|抛出异常|返回特殊值|一直阻塞|超时退出|
+|----|-------|----------|------|---------|
+|插入|add(e)|offer(e)|put(e)|offer(e, time, unit)|
+|移除|remove()|poll()|take()|poll(time,unit)|
+|检查|element()|peek()|不可用|不可用|
+
+
+
+*如果是无界阻塞队列，队列不可能会出现满的情况，所以使用put或offer方法永远不会被阻塞，而且使用offer方法时，该方法永远返回true。*
+
+
+### 6.3.2 java中的阻塞队列
+
+- ArrayBlockingQueue：一个由数组结构组成的有界阻塞队列。
+
+此队列按照先进先出（FIFO）的原则对元素进行排序。
+
+默认时非公平的
+
+公平的时适用ReentrantLock实现的，会影响吞吐量
+
+
+- LinkedBlockingQueue：一个由链表结构组成的有界阻塞队列。
+
+此队列的默认和最大长度为Integer.MAX_VALUE。此队列按照先进先出的原则对元素进行排序。
+
+- PriorityBlockingQueue：一个支持优先级排序的无界阻塞队列。
+
+默认情况下元素采取自然顺序升序排列。也可以自定义类实现compareTo()方法来指定元素排序规则，或者初始化PriorityBlockingQueue时，指定构造参数Comparator来对元素进行排序
+
+- DelayQueue：一个使用优先级队列实现的无界阻塞队列。
+
+队列使用PriorityQueue来实现。队列中的元素必须实现Delayed接口，在创建元素时可以指定多久才能从队列中获取当前元素。只有在延迟期满时才能从队列中提取元素。
+
+**适用场景**
+
+1. 缓存系统的设计
+2. 定时任务调度
+
+**适用**
+
+如何实现Delayed接口
+
+第一步：在对象创建的时候，初始化基本数据。使用time记录当前对象延迟到什么时候可以使用，使用sequenceNumber来标识元素在队列中的先后顺序
+
+第二步：实现getDelay方法，该方法返回当前元素还需要延时多长时间，单位是纳秒
+
+第三步：实现compareTo方法来指定元素的顺序。
+
+如何实现延时阻塞队列
+
+延时阻塞队列的实现很简单，当消费者从队列里获取元素时，如果元素没有达到延时时间，就阻塞当前线程。
+
+
+- SynchronousQueue：一个不存储元素的阻塞队列。
+
+每一个put操作必须等待一个take操作，否则不能继续添加元素。
+
+默认非公平
+
+队列本身并不存储任何元素，非常适合传递性场景
+
+
+- LinkedTransferQueue：一个由链表结构组成的无界阻塞队列。
+
+相对于其他阻塞队列，LinkedTransferQueue多了tryTransfer和transfer方法。
+
+transfer方法：
+
+如果当前有消费者正在等待接收元素（消费者使用take()方法或带时间限制的poll()方法时），transfer方法可以把生产者传入的元素立刻transfer（传输）给消费者。如果没有消费者在等待接收元素，transfer方法会将元素存放在队列的tail节点，并等到该元素被消费者消费了才返回。
+
+tryTransfer方法：
+
+tryTransfer方法是用来试探生产者传入的元素是否能直接传给消费者。如果没有消费者等待接收元素，则返回false。
+
+和transfer方法的区别是tryTransfer方法无论消费者是否接收，方法立即返回，而transfer方法是必须等到消费者消费了才返回。
+
+tryTransfer（E e，long timeout，TimeUnit unit）方法：
+
+和transfer方法类似，但是多了超时限制，超时了还没被消费也会返回
+
+
+- LinkedBlockingDeque：一个由链表结构组成的双向阻塞队列。
+
+双向队列因为多了一个操作队列的入口，在多线程同时入队时，也就减少了一半的竞争。相比其他的阻塞队列，LinkedBlockingDeque多了addFirst、addLast、offerFirst、offerLast、peekFirst和peekLast等方法
+
+双向阻塞队列可以运用在“工作窃取”模式中。
+
+### 6.3.3 双向队列实现原理
+
+使用通知模式实现。所谓通知模式，就是当生产者往满的队列里添加元素时会阻塞住生产者，当消费者消费了一个队列中的元素后，会通知生产者当前队列可用。通过查看JDK源码发现ArrayBlockingQueue使用了Condition来实现
+
+## 6.4 Fork/Join框架
+
+### 6.4.1 定义
+
+Fork/Join框架是Java 7提供的一个用于并行执行任务的框架，是一个把大任务分割成若干个小任务，最终汇总每个小任务结果后得到大任务结果的框架。
+
+### 6.4.2 工作窃取算法
+
+工作窃取（work-stealing）算法是指某个线程从其他队列里窃取任务来执行
+
+为了减少窃取任务线程和被窃取任务线程之间的竞争，通常会使用双端队列，被窃取任务线程永远从双端队列的头部拿任务执行，而窃取任务的线程永远从双端队列的尾部拿任务执行。
+
+- 工作窃取算法的优点：充分利用线程进行并行计算，减少了线程间的竞争。
+- 工作窃取算法的缺点：在某些情况下还是存在竞争，比如双端队列里只有一个任务时。并且该算法会消耗了更多的系统资源，比如创建多个线程和多个双端队列。
+
+
+### 6.4.3 Fork/Join框架的设计
+
+- 分割任务
+
+需要有一个fork类来把大任务分割成子任务，有可能子任务还是很大，所以还需要不停地分割，直到分割出的子任务足够小。
+
+通过ForkJoinTask类实现
+
+要使用ForkJoin框架，必须首先创建一个ForkJoin任务。它提供在任务中执行fork()和join()操作的机制。通常情况下，我们不需要直接继承ForkJoinTask类，只需要继承它的子类，Fork/Join框架提供了以下两个子类。
+
+RecursiveAction：用于没有返回结果的任务。
+
+RecursiveTask：用于有返回结果的任务。
 
 
 
 
+- 执行任务，合并结果
+
+ForkJoinPool：ForkJoinTask需要通过ForkJoinPool来执行。
+
+任务分割出的子任务会添加到当前工作线程所维护的双端队列中，进入队列的头部。当一个工作线程的队列里暂时没有任务时，它会随机从其他工作线程的队列的尾部获取一个任务。
+
+### 6.4.4 使用示例
+
+使用的例子balabalxxx....
+
+ForkJoinTask与一般任务的主要区别在于它需要实现compute方法，在这个方法里，首先需要判断任务是否足够小，如果足够小就直接执行任务。如果不足够小，就必须分割成两个子任务，每个子任务在调用fork方法时，又会进入compute方法，看看当前子任务是否需要继续分割成子任务，如果不需要继续分割，则执行当前子任务并返回结果。使用join方法会等待子任务执行完并得到其结果。
+
+
+### 6.4.5 Fork/Join框架的异常处理
+
+ForkJoinTask在执行的时候可能会抛出异常，但是我们没办法在主线程里直接捕获异常，所以ForkJoinTask提供了isCompletedAbnormally()方法来检查任务是否已经抛出异常或已经被取消了，并且可以通过ForkJoinTask的getException方法获取异常。使用如下代码。
+
+### 6.4.6 Fork/Join框架的实现原理
+
+
+ForkJoinPool由ForkJoinTask数组和ForkJoinWorkerThread数组组成，ForkJoinTask数组负责将存放程序提交给ForkJoinPool的任务，而ForkJoinWorkerThread数组负责执行这些任务。
 
 
 
