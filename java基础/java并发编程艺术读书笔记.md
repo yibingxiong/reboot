@@ -1557,6 +1557,99 @@ ForkJoinTask在执行的时候可能会抛出异常，但是我们没办法在�
 ForkJoinPool由ForkJoinTask数组和ForkJoinWorkerThread数组组成，ForkJoinTask数组负责将存放程序提交给ForkJoinPool的任务，而ForkJoinWorkerThread数组负责执行这些任务。
 
 
+# 第7章 Java中的13个原子操作类
+
+为了实现原子操作，jdk1.5开始提供了一些原子操作类,位于java.util.concurrent.atomic包，Atomic包里的类基本都是使用Unsafe实现的包装类.
+
+## 7.1 原子更新基本类型类
+
+- AtomicBoolean：原子更新布尔类型。
+- AtomicInteger：原子更新整型。
+- AtomicLong：原子更新长整型。
+
+方法基本类似，以AtomicInteger为例
+
+### 核心API
+
+- int addAndGet(int delta)： +delta并返回
+- boolean compareAndSet(int expect, int update)：如果原来的值==expect那么更新为update, 返回true，否则返回false。
+- int getAndIncrement()：先获取再加1
+- void lazySet(int newValue)：最终会设置成newValue，使用lazySet设置值后，可能导致其他线程在之后的一小段时间内还是可以读到旧的值。
+- int getAndSet(int newValue)：设置为newValue的值，并返回旧值。
+- int get()：获取当前的值
+
+### 核心原理
+
+主要是使用compareAndSet(int expect, int update)，CAS，在旧值==expect时更新成功，否则失败，失败就自旋
+
+而compareAndSet是调用了Unsafe里边的方法  native boolean compareAndSwapInt(Object var1, long var2, int var4, int var5)
+
+## 原子更新数组
+
+- AtomicIntegerArray：原子更新整型数组里的元素。
+- AtomicLongArray：原子更新长整型数组里的元素。
+- AtomicReferenceArray：原子更新引用类型数组里的元素。
+- AtomicIntegerArray类主要是提供原子的方式更新数组里的整型。
+
+
+这些东西方法类似，以AtomicIntergerArray为例
+
+### 核心API
+
+- int addAndGet(int i, int delta)： i位置+delta
+- boolean compareAndSet(int i, int expect, int update): i位置如果旧值为expect，则更新
+- int get(int i)：获取i位置的值
+
+采用构造方法传进去的数据会被拷贝一份，所以互不影响
+
+
+## 7.3 原子更新引用类型
+
+如果要原子更新多个变量，就需要使用这个原子更新引用类型提供的类
+
+- AtomicReference：原子更新引用类型。
+- AtomicReferenceFieldUpdater：原子更新引用类型里的字段。
+- AtomicMarkableReference：原子更新带有标记位的引用类型。可以原子更新一个布尔类型的标记位和引用类型。构造方法是AtomicMarkableReference（V initialRef, boolean initialMark）。
+
+用法差不多，以AtomicReference为例
+
+### 核心API
+
+- void set(V newValue)：set值
+- void boolean compareAndSet(V expect, V update)：比较设置
+
+
+
+## 7.4 原子更新字段类
+
+如果需原子地更新某个类里的某个字段时，就需要使用原子更新字段类
+
+- AtomicIntegerFieldUpdater：原子更新整型的字段的更新器。
+- AtomicLongFieldUpdater：原子更新长整型字段的更新器。
+- AtomicStampedReference：原子更新带有版本号的引用类型。该类将整数值与引用关联起来，可用于原子的更新数据和数据的版本号，可以解决使用CAS进行原子更新时可能出现的ABA问题。
+
+- 第一步，因为原子更新字段类都是抽象类，每次使用的时候必须使用静态方法newUpdater()创建一个更新器，并且需要设置想要更新的类和属性。
+- 第二步，更新类的字段（属性）必须使用public volatile修饰符。
+
+核心api:
+
+举一个例子
+
+- int getAndIncrement(T obj)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
