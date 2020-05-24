@@ -2,58 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7630e73b-84d0-41c4-b342-278a4160003c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/Prototype.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/Singleton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/abstractfactory/Factory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/abstractfactory/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/abstractfactory/ProductA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/abstractfactory/ProductB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/builder/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/builder/ProductBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/command/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/command/ConcreteCommand1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/command/ConcreteCommand2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/command/ConcreteRecevier1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/command/ConcreteRecevier2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/command/Invoker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/command/Recevier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/dynamicproxy/Advice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/dynamicproxy/BeforeAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/dynamicproxy/MyInvocationHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/dynamicproxy/RealSubject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/dynamicproxy/Subject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/dynamicproxy/SubjectDynamicProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/factory/Factory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/factory/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/factory/ProductA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/factory/ProductB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/factory/ProductFactory1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/factory/ProductFactory2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/mediator/Colleagure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/mediator/ConcreteColleagure1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/mediator/ConcreteColleagure2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/mediator/ConcreteMediator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/mediator/Mediator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/proxy/RealSubject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/proxy/Subject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/proxy/SubjectProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/template/TemplateClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/template/TemplateSubClass1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/template/TemplateSubClass2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/transientproxy/RealSubject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/transientproxy/Subject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/transientproxy/SubjectProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/xiong/dp/FactoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/xiong/dp/MediatorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/xiong/dp/SingletonTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/xiong/dp/command/CommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/xiong/dp/dynamicproxy/ProxyTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/xiong/dp/proxy/SubjectProxyTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/xiong/dp/template/TemplateTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/xiong/dp/transientproxy/ProxyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/decorator/Component.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/decorator/ConcreteComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/decorator/Decorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/requestchain/Handler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/requestchain/Level.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/requestchain/Level1Handler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/requestchain/Level2Handler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/requestchain/Level3Handler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/requestchain/Request.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/requestchain/Response.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/xiong/dp/DecoratorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/xiong/dp/RequestChainTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../笔记/02各种设计模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/../笔记/02各种设计模式.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -69,115 +31,51 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/mediator/ConcreteMediator.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/decorator/Component.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" selection-start-line="2" selection-end-line="15" selection-end-column="1" />
+            <state relative-caret-position="132">
+              <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/xiong/dp/MediatorTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/decorator/ConcreteComponent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" selection-start-line="8" selection-end-line="22" selection-end-column="1" />
+            <state relative-caret-position="132">
+              <caret line="6" column="27" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="27" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#126#127#0" expanded="true" />
+                <element signature="e#171#172#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/command/Recevier.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/decorator/Decorator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" selection-start-line="2" selection-end-line="7" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/command/Command.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/command/ConcreteCommand1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+            <state relative-caret-position="366">
+              <caret line="17" column="25" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="25" />
               <folding>
-                <element signature="e#155#156#0" expanded="true" />
-                <element signature="e#195#196#0" expanded="true" />
-                <element signature="e#228#229#0" expanded="true" />
-                <element signature="e#247#248#0" expanded="true" />
-                <element signature="e#302#303#0" expanded="true" />
-                <element signature="e#340#341#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/command/ConcreteCommand2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/command/Invoker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-              <folding>
-                <element signature="e#128#129#0" expanded="true" />
-                <element signature="e#166#167#0" expanded="true" />
-                <element signature="e#198#199#0" expanded="true" />
-                <element signature="e#236#237#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/xiong/dp/command/CommandTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/command/ConcreteRecevier1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" selection-start-line="2" selection-end-line="9" selection-end-column="1" />
-              <folding>
-                <element signature="e#123#124#0" expanded="true" />
-                <element signature="e#183#184#0" expanded="true" />
+                <element signature="e#173#174#0" expanded="true" />
+                <element signature="e#215#216#0" expanded="true" />
+                <element signature="e#262#263#0" expanded="true" />
+                <element signature="e#296#297#0" expanded="true" />
+                <element signature="e#331#332#0" expanded="true" />
+                <element signature="e#375#376#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/command/ConcreteRecevier2.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/xiong/dp/DecoratorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" selection-start-line="2" selection-end-line="9" selection-end-column="1" />
+            <state relative-caret-position="176">
+              <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
               <folding>
-                <element signature="e#111#112#0" expanded="true" />
-                <element signature="e#145#146#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -199,22 +97,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xiong/dp/Singleton.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/xiong/dp/SingletonTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xiong/dp/factory/Product.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xiong/dp/factory/ProductA.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xiong/dp/factory/ProductB.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xiong/dp/factory/Factory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xiong/dp/factory/ProductFactory1.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/xiong/dp/FactoryTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xiong/dp/factory/ProductFactory2.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xiong/dp/abstractfactory/Product.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xiong/dp/abstractfactory/AbstractFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xiong/dp/abstractfactory/Factory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xiong/dp/template/TemplateClass.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/xiong/dp/template/TemplateSubClass1.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xiong/dp/template/TemplateSubClass2.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/xiong/template/TemplateTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xiong/dp/builder/Product.java" />
@@ -249,6 +131,23 @@
         <option value="$PROJECT_DIR$/src/main/java/com/xiong/dp/command/ConcreteCommand2.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/xiong/dp/command/Invoker.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/xiong/dp/command/CommandTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/xiong/dp/requestchain/Request.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/xiong/dp/requestchain/Response.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/xiong/dp/requestchain/Level.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/xiong/dp/requestchain/Level1Handler.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/xiong/dp/requestchain/Level2Handler.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/xiong/dp/requestchain/Level3Handler.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/xiong/dp/requestchain/Handler.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/xiong/dp/RequestChainTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xiong/dp/requestchain/Level.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xiong/dp/requestchain/Request.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xiong/dp/requestchain/Response.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xiong/dp/requestchain/Handler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xiong/dp/requestchain/Level1Handler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xiong/dp/decorator/Component.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xiong/dp/decorator/ConcreteComponent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/xiong/dp/decorator/Decorator.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/xiong/dp/DecoratorTest.java" />
       </list>
     </option>
   </component>
@@ -313,7 +212,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="dp" type="462c0819:PsiDirectoryNode" />
-              <item name="command" type="462c0819:PsiDirectoryNode" />
+              <item name="decorator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="design-partern-demo" type="b2602c69:ProjectViewProjectNode" />
@@ -335,10 +234,6 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="dp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="design-partern-demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -363,6 +258,7 @@
       <recent name="com.xiong.dp" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.xiong.dp.requestchain" />
       <recent name="com.xiong.dp.command" />
       <recent name="com.xiong.dp.mediator" />
     </key>
@@ -385,7 +281,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CommandTest.test">
+  <component name="RunManager" selected="JUnit.DecoratorTest.test">
     <configuration name="CommandTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="design-partern-demo" />
       <extension name="coverage">
@@ -396,6 +292,22 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.xiong.dp.command" />
       <option name="MAIN_CLASS_NAME" value="com.xiong.dp.command.CommandTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DecoratorTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="design-partern-demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xiong.dp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.xiong.dp" />
+      <option name="MAIN_CLASS_NAME" value="com.xiong.dp.DecoratorTest" />
       <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -418,48 +330,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProxyTest.test (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RequestChainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="design-partern-demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.xiong.dp.dynamicproxy.*" />
+          <option name="PATTERN" value="com.xiong.dp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.xiong.dp.dynamicproxy" />
-      <option name="MAIN_CLASS_NAME" value="com.xiong.dp.dynamicproxy.ProxyTest" />
+      <option name="PACKAGE_NAME" value="com.xiong.dp" />
+      <option name="MAIN_CLASS_NAME" value="com.xiong.dp.RequestChainTest" />
       <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProxyTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RequestChainTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="design-partern-demo" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.xiong.dp.transientproxy.*" />
+          <option name="PATTERN" value="com.xiong.dp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.xiong.dp.transientproxy" />
-      <option name="MAIN_CLASS_NAME" value="com.xiong.dp.transientproxy.ProxyTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SubjectProxyTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="design-partern-demo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.xiong.dp.proxy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.xiong.dp.proxy" />
-      <option name="MAIN_CLASS_NAME" value="com.xiong.dp.proxy.SubjectProxyTest" />
+      <option name="PACKAGE_NAME" value="com.xiong.dp" />
+      <option name="MAIN_CLASS_NAME" value="com.xiong.dp.RequestChainTest" />
       <option name="METHOD_NAME" value="test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -468,11 +364,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DecoratorTest.test" />
+        <item itemvalue="JUnit.RequestChainTest" />
+        <item itemvalue="JUnit.RequestChainTest.test" />
         <item itemvalue="JUnit.CommandTest.test" />
         <item itemvalue="JUnit.MediatorTest.test" />
-        <item itemvalue="JUnit.ProxyTest.test (1)" />
-        <item itemvalue="JUnit.ProxyTest.test" />
-        <item itemvalue="JUnit.SubjectProxyTest.test" />
       </list>
     </recent_temporary>
   </component>
@@ -487,44 +383,44 @@
       <option name="presentableId" value="Default" />
       <updated>1590210343814</updated>
       <workItem from="1590210347927" duration="8663000" />
-      <workItem from="1590287850913" duration="9818000" />
+      <workItem from="1590287850913" duration="14489000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SingletonTest_test - 2020.05.23 at 21h 28m 07s.xml">
-      <configuration name="SingletonTest.test" configurationId="JUnit" />
+    <history-entry file="RequestChainTest - 2020.05.24 at 16h 25m 22s.xml">
+      <configuration name="RequestChainTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FactoryTest_test - 2020.05.23 at 21h 40m 20s.xml">
-      <configuration name="FactoryTest.test" configurationId="JUnit" />
+    <history-entry file="RequestChainTest - 2020.05.24 at 16h 25m 39s.xml">
+      <configuration name="RequestChainTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FactoryTest_test - 2020.05.23 at 21h 40m 34s.xml">
-      <configuration name="FactoryTest.test" configurationId="JUnit" />
+    <history-entry file="RequestChainTest - 2020.05.24 at 16h 25m 55s.xml">
+      <configuration name="RequestChainTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TemplateTest_test - 2020.05.24 at 00h 22m 17s.xml">
-      <configuration name="TemplateTest.test" configurationId="JUnit" />
+    <history-entry file="RequestChainTest - 2020.05.24 at 16h 28m 29s.xml">
+      <configuration name="RequestChainTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SubjectProxyTest_test - 2020.05.24 at 10h 42m 54s.xml">
-      <configuration name="SubjectProxyTest.test" configurationId="JUnit" />
+    <history-entry file="RequestChainTest - 2020.05.24 at 16h 29m 50s.xml">
+      <configuration name="RequestChainTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SubjectProxyTest_test - 2020.05.24 at 10h 43m 27s.xml">
-      <configuration name="SubjectProxyTest.test" configurationId="JUnit" />
+    <history-entry file="RequestChainTest - 2020.05.24 at 16h 30m 14s.xml">
+      <configuration name="RequestChainTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProxyTest_test - 2020.05.24 at 10h 55m 15s.xml">
-      <configuration name="ProxyTest.test" configurationId="JUnit" />
+    <history-entry file="RequestChainTest - 2020.05.24 at 16h 30m 52s.xml">
+      <configuration name="RequestChainTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProxyTest_test_(1) - 2020.05.24 at 11h 36m 56s.xml">
-      <configuration name="ProxyTest.test (1)" configurationId="JUnit" />
+    <history-entry file="RequestChainTest - 2020.05.24 at 16h 32m 57s.xml">
+      <configuration name="RequestChainTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MediatorTest_test - 2020.05.24 at 14h 04m 17s.xml">
-      <configuration name="MediatorTest.test" configurationId="JUnit" />
+    <history-entry file="RequestChainTest - 2020.05.24 at 16h 33m 21s.xml">
+      <configuration name="RequestChainTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CommandTest_test - 2020.05.24 at 15h 10m 02s.xml">
-      <configuration name="CommandTest.test" configurationId="JUnit" />
+    <history-entry file="RequestChainTest - 2020.05.24 at 16h 34m 01s.xml">
+      <configuration name="RequestChainTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18481000" />
+    <option name="totallyTimeSpent" value="23152000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="58" y="-7" width="1485" height="878" extended-state="6" />
@@ -539,15 +435,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.42627347" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.24396783" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.25603217" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.58042896" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3297587" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.54289544" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.3297587" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -566,96 +462,14 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="this.getHandleLevel().getCode()" />
+      </configuration>
+    </watches-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/factory/ProductA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#109#110#0" expanded="true" />
-            <element signature="e#163#164#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/factory/ProductB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" selection-start-line="2" selection-end-line="9" selection-end-column="1" />
-          <folding>
-            <element signature="e#109#110#0" expanded="true" />
-            <element signature="e#163#164#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/factory/Factory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" selection-start-line="2" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/xiong/dp/SingletonTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/xiong/dp/FactoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" selection-start-line="5" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/abstractfactory/ProductB.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/abstractfactory/ProductA.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/factory/ProductFactory1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/factory/ProductFactory2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="53" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/abstractfactory/Product.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/abstractfactory/Factory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#99#100#0" expanded="true" />
-            <element signature="e#136#137#0" expanded="true" />
-            <element signature="e#176#177#0" expanded="true" />
-            <element signature="e#213#214#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/template/TemplateClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" selection-start-line="2" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/template/TemplateSubClass1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -932,55 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/command/Command.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/command/ConcreteCommand2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/xiong/dp/command/CommandTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/command/Invoker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-          <folding>
-            <element signature="e#128#129#0" expanded="true" />
-            <element signature="e#166#167#0" expanded="true" />
-            <element signature="e#198#199#0" expanded="true" />
-            <element signature="e#236#237#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/command/ConcreteCommand1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding>
-            <element signature="e#155#156#0" expanded="true" />
-            <element signature="e#195#196#0" expanded="true" />
-            <element signature="e#228#229#0" expanded="true" />
-            <element signature="e#247#248#0" expanded="true" />
-            <element signature="e#302#303#0" expanded="true" />
-            <element signature="e#340#341#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/command/Recevier.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -1006,6 +771,193 @@
           <folding>
             <element signature="e#111#112#0" expanded="true" />
             <element signature="e#145#146#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/command/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/command/ConcreteCommand1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="20" selection-end-column="1" />
+          <folding>
+            <element signature="e#163#164#0" expanded="true" />
+            <element signature="e#203#204#0" expanded="true" />
+            <element signature="e#236#237#0" expanded="true" />
+            <element signature="e#281#282#0" expanded="true" />
+            <element signature="e#310#311#0" expanded="true" />
+            <element signature="e#348#349#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/command/ConcreteCommand2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="20" selection-end-column="1" />
+          <folding>
+            <element signature="e#163#164#0" expanded="true" />
+            <element signature="e#203#204#0" expanded="true" />
+            <element signature="e#236#237#0" expanded="true" />
+            <element signature="e#281#282#0" expanded="true" />
+            <element signature="e#310#311#0" expanded="true" />
+            <element signature="e#348#349#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/command/Invoker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="15" selection-end-column="1" />
+          <folding>
+            <element signature="e#140#141#0" expanded="true" />
+            <element signature="e#178#179#0" expanded="true" />
+            <element signature="e#206#207#0" expanded="true" />
+            <element signature="e#244#245#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/xiong/dp/command/CommandTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/requestchain/Level.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="24" selection-end-column="1" />
+          <folding>
+            <element signature="e#305#306#0" expanded="true" />
+            <element signature="e#332#333#0" expanded="true" />
+            <element signature="e#362#363#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/requestchain/Response.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="21" selection-end-column="1" />
+          <folding>
+            <element signature="e#245#246#0" expanded="true" />
+            <element signature="e#272#273#0" expanded="true" />
+            <element signature="e#302#303#0" expanded="true" />
+            <element signature="e#328#329#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/requestchain/Handler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="33" selection-end-column="1" />
+          <folding>
+            <element signature="e#166#167#0" expanded="true" />
+            <element signature="e#212#213#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/requestchain/Level1Handler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="13" selection-end-column="1" />
+          <folding>
+            <element signature="e#130#131#0" expanded="true" />
+            <element signature="e#165#166#0" expanded="true" />
+            <element signature="e#218#219#0" expanded="true" />
+            <element signature="e#282#283#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/requestchain/Level2Handler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/requestchain/Level3Handler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/requestchain/Request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="15" selection-end-column="1" />
+          <folding>
+            <element signature="e#121#122#0" expanded="true" />
+            <element signature="e#155#156#0" expanded="true" />
+            <element signature="e#193#194#0" expanded="true" />
+            <element signature="e#226#227#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/xiong/dp/RequestChainTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1">
+          <caret line="5" selection-start-line="5" selection-end-line="21" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/decorator/Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/decorator/ConcreteComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="27" />
+          <folding>
+            <element signature="e#126#127#0" expanded="true" />
+            <element signature="e#171#172#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/decorator/Decorator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="17" column="25" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="25" />
+          <folding>
+            <element signature="e#173#174#0" expanded="true" />
+            <element signature="e#215#216#0" expanded="true" />
+            <element signature="e#262#263#0" expanded="true" />
+            <element signature="e#296#297#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
+            <element signature="e#375#376#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/xiong/dp/DecoratorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
