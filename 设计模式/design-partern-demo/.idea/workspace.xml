@@ -86,7 +86,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/briage/Implementor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="44">
@@ -98,8 +98,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/briage/ConcreteImplementor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+            <state relative-caret-position="44">
+              <caret line="2" selection-start-line="2" selection-end-line="14" selection-end-column="1" />
               <folding>
                 <element signature="e#137#138#0" expanded="true" />
                 <element signature="e#173#174#0" expanded="true" />
@@ -113,11 +113,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/briage/Abstraction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+            <state relative-caret-position="44">
+              <caret line="2" selection-start-line="2" selection-end-line="19" selection-end-column="1" />
               <folding>
                 <element signature="e#169#170#0" expanded="true" />
                 <element signature="e#215#216#0" expanded="true" />
+                <element signature="e#244#245#0" expanded="true" />
                 <element signature="e#290#291#0" expanded="true" />
                 <element signature="e#337#338#0" expanded="true" />
                 <element signature="e#371#372#0" expanded="true" />
@@ -126,11 +127,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/briage/ConcreteAbstraction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+            <state relative-caret-position="352">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="e#153#154#0" expanded="true" />
                 <element signature="e#187#188#0" expanded="true" />
@@ -484,7 +485,7 @@
       <option name="presentableId" value="Default" />
       <updated>1590210343814</updated>
       <workItem from="1590210347927" duration="8663000" />
-      <workItem from="1590287850913" duration="30146000" />
+      <workItem from="1590287850913" duration="30807000" />
     </task>
     <servers />
   </component>
@@ -521,7 +522,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38809000" />
+    <option name="totallyTimeSpent" value="39470000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="59" y="-7" width="1484" height="878" extended-state="6" />
@@ -1055,10 +1056,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/xiong/dp/briage/BriageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" selection-start-line="4" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/briage/Implementor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/briage/ConcreteImplementor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="14" selection-end-column="1" />
           <folding>
             <element signature="e#137#138#0" expanded="true" />
             <element signature="e#173#174#0" expanded="true" />
@@ -1068,20 +1083,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/xiong/dp/briage/BriageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" selection-start-line="4" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/briage/Abstraction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+        <state relative-caret-position="44">
+          <caret line="2" selection-start-line="2" selection-end-line="19" selection-end-column="1" />
           <folding>
             <element signature="e#169#170#0" expanded="true" />
             <element signature="e#215#216#0" expanded="true" />
+            <element signature="e#244#245#0" expanded="true" />
             <element signature="e#290#291#0" expanded="true" />
             <element signature="e#337#338#0" expanded="true" />
             <element signature="e#371#372#0" expanded="true" />
@@ -1091,19 +1100,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/briage/ConcreteAbstraction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        <state relative-caret-position="352">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="e#153#154#0" expanded="true" />
             <element signature="e#187#188#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/briage/Implementor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" selection-start-line="2" selection-end-line="8" selection-end-column="1" />
         </state>
       </provider>
     </entry>
