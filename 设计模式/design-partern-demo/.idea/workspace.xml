@@ -2,41 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7630e73b-84d0-41c4-b342-278a4160003c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/briage/Abstraction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/briage/ConcreteAbstraction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/briage/ConcreteImplementor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/briage/Implementor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/facade/Facade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/facade/SubSystemA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/facade/SubSystemB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/facade/SubSystemC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/flyweight/ConcreteFlyWeight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/flyweight/FlyWeight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/flyweight/FlyWeightFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/memento/Caretaker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/memento/Memento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/memento/Originator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/observer/ConcreteObserver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/observer/ConcreteSubject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/observer/Observer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/observer/Subject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/state/Context.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/state/State.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/state/State1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/state/State2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/visit/ConcreteElement1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/visit/ConcreteElement2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/visit/Element.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/visit/IVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/visit/ObjectStructure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/xiong/dp/visit/Visitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/xiong/dp/briage/BriageTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/xiong/dp/memento/MementoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/xiong/dp/observer/ObserverTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/xiong/dp/state/StateTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/xiong/dp/visitor/VisitorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../笔记/02各种设计模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/../笔记/02各种设计模式.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -130,8 +96,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/briage/ConcreteAbstraction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="32">
+              <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
               <folding>
                 <element signature="e#153#154#0" expanded="true" />
                 <element signature="e#187#188#0" expanded="true" />
@@ -258,11 +224,11 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="310" />
-    <option name="y" value="135" />
-    <option name="width" value="1380" />
-    <option name="height" value="810" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="263" />
+    <option name="y" value="107" />
+    <option name="width" value="1104" />
+    <option name="height" value="648" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -348,7 +314,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/xiong/dp/dynamicproxy" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../my/algorithm/code" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -485,7 +451,7 @@
       <option name="presentableId" value="Default" />
       <updated>1590210343814</updated>
       <workItem from="1590210347927" duration="8663000" />
-      <workItem from="1590287850913" duration="30807000" />
+      <workItem from="1590287850913" duration="35931000" />
     </task>
     <servers />
   </component>
@@ -522,13 +488,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39470000" />
+    <option name="totallyTimeSpent" value="44594000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="59" y="-7" width="1484" height="878" extended-state="6" />
+    <frame x="211" y="86" width="883" height="518" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18723702" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32363635" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -537,7 +503,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31903484" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.6165803" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.25603217" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1100,8 +1066,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/xiong/dp/briage/ConcreteAbstraction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="32">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
           <folding>
             <element signature="e#153#154#0" expanded="true" />
             <element signature="e#187#188#0" expanded="true" />
